@@ -6,16 +6,9 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3306;
 
 const app = express();
+const cors = require("cors");
 
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-  bodyParser.json();
-});
+app.use(bodyParser.json(), cors({ origin: true }));
 
 // MySql
 const connection = mysql.createConnection({
