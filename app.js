@@ -3,7 +3,7 @@ const mysql = require("mysql");
 
 const bodyParser = require("body-parser");
 
-const PORT = process.env.PORT || 3050;
+const PORT = process.env.PORT || 3306;
 
 const app = express();
 
@@ -11,10 +11,10 @@ app.use(bodyParser.json());
 
 // MySql
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "rootpass",
-  database: "node20_mysql",
+  host: "ctgplw90pifdso61.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  user: "jq1h63onppeuhqu2",
+  password: "g0lklyl0wts6tkxx",
+  database: "h2yy7oayk3hxmze3",
 });
 
 // Route
