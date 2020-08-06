@@ -39,7 +39,7 @@ app.get("/badges", (req, res) => {
 
 app.get("/badges/:id", (req, res) => {
   const { id } = req.params;
-  const sql = `SELECT * FROM badges WHERE id = ${id}`;
+  const sql = `SELECT * FROM BADGES WHERE id = ${id}`;
   connection.query(sql, (error, result) => {
     if (error) throw error;
 
