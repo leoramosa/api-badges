@@ -69,7 +69,7 @@ app.post("/add", (req, res) => {
     lastName: req.body.lastName,
     email: req.body.email,
     jobTitle: req.body.jobTitle,
-    twitter: req.body.city,
+    twitter: req.body.twitter,
   };
 
   connection.query(sql, badgesObj, (error) => {
